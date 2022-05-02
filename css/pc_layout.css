@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+/* 상단해더서식 */
+header{
+  height:170px;
+  background-color:#fff;
+}
+.header_top{
+  width:1200px;
+  margin:0px auto;
+  position:relative;
+}
+.header_top > h1{
+  position:relative;
+  top:50px;
+  width:200px;
+}
+.header_top >h1 img{width:100%;}
+
+.lnb{
+  transform:translateY(25px);
+}
+.lnb > ul{
+  display:flex;
+  justify-content:flex-end;
+  padding-right:13px;
+}
+.lnb > ul > li{
+  margin:0px 10px;
+}
+.lnb > ul > li > a{
+  color:#333;
+  font-size:13px;
+}
+.lnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+
+/* 검색폼 서식 */
+.header_top > fieldset{
+  position:absolute;
+  right:0px;top:80px;
+}
+fieldset > legend{display:none;}
+fieldset > #search{
+  width:230px;height:30px;
+  border-radius:26px;
+  text-align:center;
+}
+label.fa-search{
+  font-size:22px;
+  transform:translate(-36px,4px);
+}
+.fa-search span{display:none;}
+
+.header_bottom{
+  width:100%;
+  height:48px;
+  background:rgba(255, 255, 255, 0.644);
+  position:absolute;
+  top:122px;
+  z-index:5; /* 메인슬라이드보다 위로 올리기 */
+  overflow:hidden; /* 해당영역을 벗어나면 서브 숨김 */
+  transition:0.5s;
+}
+.header_bottom:hover{
+  height:450px; 
+}
+/* 메인네비게이션 메뉴서식 */
+.gnb{
+  background-color:#fed5d3;
+  height:48px;
+}
+.gnb > ul{
+  width:1200px;
+  margin:0px auto;
+  display:flex;
+  justify-content:flex-end;
+}
+.gnb > ul > li{
+  line-height:48px;
+  text-align:center;
+  position:relative; /* 서브 부모걸기*/
+  padding:0px 40px;
+}
+.gnb > ul > li > a{
+  color:#333;
+  font-size:16px;
+  font-weight:400;
+  /* border-right:1px solid#ccc; */
+}
+.gnb > ul > li > a::after{
+  width:1px;height:10px;
+  background:#fff;
+  content:"";
+  display:block;
+  position:relative;left:-28px;top:-27px;
+}
+.gnb > ul > li:first-child > a::after{left:90px;}
+.gnb > ul > li:nth-child(2) > a::after{left:120px;}
+.gnb > ul > li:nth-child(3) > a::after{left:87px;}
+.gnb > ul > li:last-child > a::after{display:none;}
+
+
+/* 서브네비게이션 메뉴서식 */
+.sub{ /* 서브에는 자식걸기 */
+  position:absolute;
+  width:100%;
+  left:0px;
+}
+.sub > li a{
+  font-size:14px;
+}
+.sub > li a:hover{
+  text-decoration:underline;
+}
+
+/* 메인서식 */
+
+.slide > h3{display:none;}
+.slide > .main_slide img{width:100%;}
+
+/* 하림펫푸드 사료 무료체험  */
+.free_ex{
+  width:100%;
+  height:530px;
+  margin-top:60px;
+}
+.free_ex article{
+  height:500px;
+  padding:15px 0px;
+  width:1200px;
+  margin:0px auto;
+}
+.free_ex article >h3{
+  display:none;
+}
+.free_ex article > h3 + img{
+  float:left;
+  width:430px;
+  padding:35px 0px 0px 130px;
+}
+
+.free_ex_right{
+  text-align:center;
+  padding-top:60px;
+}
+.free_ex_right > h3{
+  font-size:36px;
+  color:#333;
+  font-weight:200;
+  padding-top:30px;
+  padding-bottom:16px;
+}
+.free_ex_right >p{
+  color:#333;
+  font-size:18px;
+  line-height:30px;
+  padding-bottom:90px;
+}
+.button{
+  font-size:16px;
+  background:#fff;
+  padding:6px 30px;
+  border:1px solid #ccc;
+  transition:0.5s;
+}
+.button:hover{
+  color:#fff;
+  background:#333;
+}
+
+
+/* 하림펫 쇼핑하러 가기 */
+.shop{
+  width:1200px;
+  margin:0px auto;
+  padding:60px 0px;
+  overflow:hidden;
+}
+
+.shop > h3{
+  font-size:36px;
+  text-align:center;
+  padding:20px 0px 60px 0px;
+  font-weight:200;
+}
+
+/* 스와이퍼 슬라이드 - 상품목록 */
+.shop_slide{
+  position:relative; /* 부모 - 콘트롤 버튼 기준 */ 
+  width:1200px;
+}
+.shop_slide .swiper-slide{
+  height:400px;
+}
+.swiper-slide img{
+  width:300px;
+  float:left;
+}
+.swiper-slide > ul{
+  display:flex;
+  padding:0px 30px;
+  box-sizing:border-box; /* 가로 100보다 초과되지 않게만듬 */
+}
+.swiper-slide > ul > li{
+  width:50%;
+}
+
+/* 상품상세정보 서식 */
+.info{
+  padding-top:40px;
+  font-size:18px;
+  transform:translateX(20px);
+}
+.info > h4{
+  font-weight:500;
+  font-size:18px;
+}
+.info > p{line-height:40px;}
+.info > .price{
+  padding-top:50px;
+  font-weight:500;
+  font-size:18px;
+  color:#f00;
+  display:inline-block;
+  /* position:relative; 높이값으로 위치변경 가능 */
+}
+.info p:last-of-type{
+  padding:30px 0px 0px 0px;
+}
+
+/* story 서식 */
+.story{
+  background-image:url('../image/backimg.jpg');
+  background-color: #46454555;
+  background-blend-mode: multiply;
+  background-attachment:fixed;
+  height:400px;
+  margin-top:90px;
+
+}
+.story article h3{
+  font-size:28px;
+  color:#fff;
+  font-weight:400;
+  padding-top:150px;
+  padding-bottom:30px;
+  text-align: center;
+}
+
+
+.story_left p{
+  color:#fff;
+  font-size:21px;
+  text-align: center;
+  opacity:70%;
+}
+
+.pro{
+  width:100%;
+  text-align:center;
+  padding-bottom:50px;
+  
+}
+.pro > ul > li{
+  display:inline;
+  padding:15px;
+}
+.pro > ul > li img{
+  padding-top:25px;
+  width:570px;
+  transition:1.3s;
+}
+.pro > ul > li img:hover{
+  transform: translateY(-15px);
+  opacity:68%;
+}
+
+/* 인스타 갤러리 서식 */
+.instar{
+  width:1200px;
+  margin:0px auto;
+  padding:90px 0px 50px 0px;
+  background-image:url('../image/icon.jpg');
+  background-repeat:no-repeat;
+  background-position-x:right;
+}
+.instar > h3{
+  text-align:center;
+  text-transform:uppercase;
+  font-size:30px;
+  font-weight:200;
+  margin-bottom:80px;
+}
+.instar > h3 > img{
+  transform:translateY(9px);
+  padding-right:10px;
+}
+.id_name{
+  text-transform:lowercase;
+  font-size:18px;
+  display:block;
+  padding:10px 0px;
+}
+
+/* 그리드 레이아웃 */
+.gallery{
+  padding:10px;
+  grid-gap:10px;
+  display:grid;
+  grid-template-columns:repeat(4, auto);
+  grid-template-rows:repeat(3, 230px);
+}
+.gallery > li{overflow:hidden;}
+.gallery > li img{
+  width:100%;
+  object-fit:cover; /* 비율에 맞춰 이미지짤라 표시함 */
+  transition:0.3s
+}
+.gallery > li img:hover{
+  opacity:0.7;
+  transform:scale(1.1);
+}
+
+
+
+/* 푸터서식 */
+footer{
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+  padding:30px 0px 30px 0px;
+  border-top:1px solid rgba(121, 120, 120, 0.411);
+}
+footer > div{
+  float:left;
+  padding-right:62px;
+}
+footer > div > h4{
+  padding-bottom:20px;
+}
+footer > div > ul > li{
+  line-height:20px;
+  font-size:12px;
+}
+footer > div > ul > .fo01{
+  font-size:18px;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+footer > div > ul > .fo02{
+  font-weight:bold;
+}
+footer > div > ul > li a{
+  color:rgb(104, 104, 104);
+  font-weight:normal;
+}
+footer > div > ul > li a:hover{
+  text-decoration:underline;
+}
+footer > div > ul > .fo03{
+  opacity:60%;
+}
+footer > div > ul > li> i.fa-facebook, i.fa-instagram, i.fa-twitter{
+  font-size:28px;
+  padding-right:10px;
+}

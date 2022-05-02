@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>하림팻푸드 - 반응형웹(메인)</title>
+    <!-- 공통서식 -->
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <!-- 초기화 서식 -->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <!-- 슬라이드 서식 -->
+    <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+    <!-- 레이아웃 서식 -->
+    <link href="./css/pc_layout.css" rel="stylesheet" type="text/css">
+
+    <!-- 테블릿 서식 -->
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+    <!-- 모바일 서식 -->
+    <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+    <!-- 공급업체 접두사 자동으로 작성해주는 스크립트 -->
+    <script src="./script/prefixfree.min.js"></script>
+    <!-- 슬라이드 스크립트 -->
+    <script src="./script/swiper.js"></script>
+    <!-- 아이콘폰트 주소 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+  <body>
+    <input type="checkbox" id="toggle">
+    <!-- 상단 해더영역 시작 -->
+    <header>
+      <div class="header_top">
+        <h1>
+          <a href="index.html" title="메인페이지 바로가기">
+            <img src="./image/logo_b.svg" alt="상단로고">
+          </a>
+        </h1>
+
+        <!-- 오른쪽 상단 lnb메뉴 -->
+        <nav class="lnb">
+          <ul>
+            <li><a href="login.html" title="로그인">로그인</a></li>
+            <li><a href="join.html" title="회원가입">회원가입</a></li>
+            <li><a href="order.html" title="주문조회">주문조회</a></li>
+            <li><a href="cart.html" title="장바구니">장바구니</a></li>
+          </ul>
+        </nav>
+
+        <!-- 검색폼 -->
+        <fieldset>
+          <legend>검색폼</legend>
+          <input type="search" id="search" placeholder="이달의 특가 5%" maxlength="30">
+          <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+        </fieldset>
+      </div>
+
+      <!-- 전체메뉴 아이콘 -->
+      <label for="toggle" class="fas fa-bars"></label>
+      <!-- 장바구니 아이콘 -->
+      <i class="fas fa-shopping-cart"></i>
+
+      <!-- 헤더영역 아래콘텐츠(메인 내비게이션) -->
+      <div class="header_bottom">
+        <!-- 닫기 버튼 아이콘 -->
+        <label for="toggle" class="fas fa-times"></label>
+        <nav class="gnb">
+          <ul>
+            <li><a href="a.html" title="브랜드">BRAND</a>
+              <ul class="sub">
+                <li><a href="a.html" title="">BRANDSTORY</a></li>
+                <li><a href="a.html" title="">MEMBERSHIP</a></li>
+              </ul>
+            </li>
+
+            <li><a href="a.html" title="정기배송">PRODUCT</a>
+              <ul class="sub">
+                <li><a href="a.html" title="">BEST SELLER</a></li>
+                <li><a href="sub.html" title="">ALL</a></li>
+                <li><a href="sub.html" title="">FACE</a></li>
+                <li><a href="sub.html" title="">LIPS</a></li>
+                <li><a href="sub.html" title="">EYE</a></li>
+                <li><a href="sub.html" title="">MULTI</a></li>
+                <li><a href="sub.html" title="">CLEANSING</a></li>
+                <li><a href="sub.html" title="">SET</a></li>
+                <li><a href="sub.html" title="">ACC</a></li>
+              </ul>
+            </li>
+
+            <li><a href="a.html" title="DOG">STORE</a>
+              <ul class="sub">
+                <li><a href="a.html" title="">LOCATION</a></li>
+              </ul>
+            </li>
+
+            <li><a href="a.html" title="CAT">COMMUNITY</a>
+              <ul class="sub">
+                <li><a href="a.html" title="">EVENT</a></li>
+                <li><a href="sub.html" title="">NOTICE</a></li>
+                <li><a href="sub.html" title="">Q &amp; A</a></li>
+                <li><a href="sub.html" title="">FQA</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인콘텐츠 영역 시작 -->
+    <main>
+      <article class="slide">
+        <h3>메인슬라이드</h3>
+        <div class="swiper-container main_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="index.html" title="사진1">
+                <img src="./image/s1.jpg" alt="사진1">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="index.html" title="사진2">
+                <img src="./image/s2.jpg" alt="사진2">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="index.html" title="사진3">
+                <img src="./image/s3.jpg" alt="사진3">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="index.html" title="사진4">
+                <img src="./image/s4.jpg" alt="사진4">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="index.html" title="사진5">
+                <img src="./image/s5.jpg" alt="사진5">
+              </a>
+            </div>
+          </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+      </article>
+
+      <!-- 하림푸드 무료체험 영역 서식-->
+      <div class="free_ex">
+        <article>
+          <h3>디어달리아 소개</h3>
+          <img src="./image/s_s1.jpg" alt="리뷰를 부탁해"
+          id="free_img">
+          <div class="free_ex_right">
+            <h3>
+              <br><strong>Let Your Timeless <br>Beauty Bloom</strong>
+            </h3>
+            <p>달리아 꽃에서 영감을 받아 탄생한 디어달리아는 <br> Timeless Beauty를 추구하는 럭셔리 비건 뷰티 브랜드입니다.</p>
+            <a href="f.html" title="체험하기" class="button">체험하기</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 하림펫 쇼핑하기 영역 서식-->
+      <article class="shop">
+        <h3><strong>BEST SELLER</strong></h3>
+
+
+          <!-- 상품목록 제이쿼리 슬라이드 -->
+          <div class="swiper shop_slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <!-- 상품목록 -->
+                <ul>
+                  <li>
+                    <img src="./image/s2_1.jpg" alt="상품1">
+                    <div class="info">
+                      <h4>블루밍 에디션</h4>
+                      <p>엔드리스 글로우 일루미네이터</p>
+                      <p>0.25 OZ. / 7.3g</p>
+                      <span class="price">KRW 35,000</span>
+                      <p><span class="button">구매하기</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./image/s2_2.jpg" alt="상품1">
+                    <div class="info">
+                      <h4>[SPECIAL] 블루밍 에디션</h4>
+                      <p>컬러 밤 & 블러쉬 세트</p>
+                      <p>0.25 OZ. / 7.3g</p>
+                      <span class="price">KRW 43,300</span>
+                      <p><span class="button">구매하기</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide">
+                <ul>
+                  <li>
+                    <img src="./image/s2_3.jpg" alt="상품1">
+                    <div class="info">
+                      <h4>립 파라다이스</h4>
+                      <p>미니 듀오 립스틱</p>
+                      <p>0.06oz 1.7g&#x00d7;2ea</p>
+                      <span class="price">KRW 30,000</span>
+                      <p><span class="button">구매하기</span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./image/s2_4.jpg" alt="상품1">
+                    <div class="info">
+                      <h4>[SPECIAL] 미스틱 소울 컬렉션</h4>
+                      <p>세트 (립 + 아이섀도우)</p>
+                      <p>0.25 OZ. / 7.3g&#x00d7;1ea</p>
+                      <span class="price">KRW 42,500</span>
+                      <p><span class="button">구매하기</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+             
+            </div>
+            <div class="swiper-pagination dot"></div>
+          </div>
+
+      </article>
+
+      
+      
+      <!-- 스토리 영역 서식 -->
+      <div class="story">
+        <article>
+         <div class="story_left">
+          <h3>
+          "디어달리아는 동물 실험과 동물성 원료 사용을 하지 않는 럭셔리 비건 뷰티 브랜드입니다."</h3>
+          <p>Let Your Timeless Beauty Bloom</p>
+
+         </div>
+
+        </article>
+      </div>
+
+     
+
+
+      <!-- 인스타 영역 서식 -->
+      <article class="instar">
+        <h3>
+          <i class="fa-brands fa-instagram"></i>instargram
+          <span class="id_name">@deardahlia</span>
+        </h3>
+
+        <ul class="gallery">
+          <li>
+            <a href="g.html" title="sns">
+              <img src="./image/sns2.jpg" alt="인스타">
+            </a>
+          </li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns1.jpg" alt="인스타"></a></li>
+          <li><a href="g.html" title="sns"><img src="./image/sns3.jpg" alt="인스타"></a></li>
+          <li><a href="g.html" title="sns"><img src="./image/sns4.jpg" alt="인스타"></a></li>
+          <li><a href="g.html" title="sns"><img src="./image/sns5.jpg" alt="인스타"></a></li>
+          <li><a href="g.html" title="sns"><img src="./image/sns6.jpg" alt="인스타"></a></li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns7.jpg" alt="인스타"></a></li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns8.jpg" alt="인스타"></a></li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns12.jpg" alt="인스타"></a></li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns11.jpg" alt="인스타"></a></li>
+          <li><a href="g.html" title="sns"><img src="./image/sns9.jpg" alt="인스타"></a></li>
+          <li class="m"><a href="g.html" title="sns"><img src="./image/sns10.jpg" alt="인스타"></a></li>
+        </ul>
+      </article>
+
+      <article class="pro">
+        <ul>
+          <li>
+            <a href="pro.html" title="바로가기">
+              <img src="./image/pro1.jpg" alt="바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="pro.html" title="바로가기">
+              <img src="./image/pro2.jpg" alt="바로가기">
+            </a>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+      <div>
+        <h4>C/S CENTER</h4>
+        <ul>
+          <li class="fo01">
+            평일 AM 10:00 - PM 5:00<br>
+            주말 및 공휴일 휴무
+          </li>
+          <li class="fo02">
+            카카오톡 문의 <a href="i.index" title="">바로가기</a><br>
+            게시판 문의 <a href="i.index" title="">바로가기</a><br>
+            마케팅 <a href="i.index" title="">바로가기</a><br>
+            FQA <a href="i.index" title="">바로가기</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>BANK INFO</h4>
+          <ul>
+            <li>신한은행 100.032.335715<br>
+                예금주명 <strong>주식회사 바람인터내셔날</strong>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4>COMPANY INFO</h4>
+          <ul>
+            <li>
+              상호 : (주)바람인터내셔날 대표 : 박래현<br>
+              전화 : 070-8779-8080 사업자등록번호 : 234-81-00766<br>
+              통신판매업 신고 : 2018-서울강남-01139<br>
+              주소 : 서울특별시 강남구 도산대로 317 (신사동) 호림아트센터 1빌딩 12층<br>
+              개인정보관리책임자 : 박래현(SUPPORT@DEARDAHLIA.COM)<br>
+              이용약관 개인정보취급장침 이용안내
+            </li>
+            <li class="fo03">COPYRIGHT ⓒ 2019 (주)바람인터내셔날. ALL RIGHTS RESERVED.</li>
+          </ul>
+        </div>
+        <div class="sns">
+          <h4>SNS</h4>
+          <ul>
+            <li>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </li>
+          </ul>
+        </div>
+      
+    </footer>
+
+
+
+    <!-- 메인 슬라이드 동작을 위한 스크립트 소스 -->
+    <script>
+      // 메인슬라드 스크립트
+      let swiper = new Swiper('.main_slide',{
+        autoplay:{
+          deplay:4000,
+          disableOnInteraction:false,
+        },
+        navigation:{
+          nextEl : ".swiper-button-next",
+          prevEl : ".swiper-button-prev",
+        },
+        pagination : {
+          el:".swiper-pagination",
+          clickable: true,
+        }
+      });
+
+      // 상품목록(shop)을 위한 스크립트
+      let shop = new Swiper('.shop_slide',{
+        autoplay:{
+          deplay:4000,
+          disableOnInteraction:false,
+        },
+        pagination : {
+          el:".dot",
+          clickable: true,
+        }
+      });
+
+      // 랜덤숫자 1~2구하기
+      let n = Math.floor(Math.random()*3+1);
+      console.log(n);
+      document.getElementById('free_img').src="./image/s_s"+n+".jpg";
+
+      let b = Math.floor(Math.random()*3+1);
+      document.getElementById('story_img').src="./image/st"+b+".jpg";
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/* 모바일 해상도일떄 적용되는 서식 */
+@media screen and (max-width:767px){
+
+label.fa-bars, i.fa-shopping-cart, label.fa-times{display:block;}
+
+/* 1200px크기를 100%로 변경한다 */
+
+.header_top, .gnb > ul, .free_ex article, .shop_slide,
+ .story article, .instar, .f_navie, .f_info, address{
+   width:100%;
+ }
+
+
+/* 해더 아이콘 */
+header{
+  height:60px;
+  position:relative;
+}
+.header_top h1{
+  position:static; /* 원래성격으로 돌아옴 */
+  text-align:center;
+  margin:0px auto;
+  padding-top:20px;
+  padding-left:15px;
+}
+.header_top h1 img{
+  width:100%;
+}
+
+/* 전체메뉴 아이콘 서식 */
+label.fa-bars, i.fa-shopping-cart{
+  font-size:1.6rem;
+  position:absolute;
+  top:16px
+}
+label.fa-bars{
+  left:17px
+}
+/* 장바구니 아이콘 서식 */
+i.fa-shopping-cart{
+  right:17px;
+}
+/* 내비게이션 서식 */
+/* lnb 서식 */
+.lnb{
+  width:100%;left:-100%;
+  position:fixed;
+  top:540px;
+  z-index:10;
+  transition:0.5s;
+}
+.lnb > ul{
+  flex-wrap:wrap;
+  margin-right:25px;
+}
+.lnb > ul >li{
+  width:44%;
+  margin:0px 2px 4px 2px;
+  background:rgb(85, 85, 85);
+  text-align:center;
+}
+.lnb > ul > li > a{
+  line-height:40px;
+  color:#fff;
+  display:block;
+}
+.lnb > ul > li > a:hover{text-decoration:none;}
+
+.header_bottom{background:none;}
+/* 닫기버튼 */
+label.fa-times{
+  color:#fff;
+  position:fixed;
+  left:-100%;top:30px;
+  font-size:2.3rem;
+  padding:10px;
+  z-index:100;
+  transition:0.5s;
+}
+.gnb{
+  position:fixed;
+  width:100%;height:100%;
+  top:0px;left:-100%;
+  transition:0.5s;
+  padding:120px 4% 0px 4%;
+  background:rgba(0,0,0,.8);
+  box-sizing:border-box;
+}
+.gnb > ul{
+  flex-direction:column;
+}
+.gnb > ul > li{
+  border-bottom:1px solid #ccc;
+  text-align:left;
+  padding:0px 2%;
+}
+.gnb > ul > li > a{color:#fff;}
+.gnb > ul > li > a::after{display:none;}
+.sub{display:none;}
+
+/* 검색창 서식 */
+.header_top > fieldset{
+  position:fixed;
+  z-index:100;
+  width:100%;
+  left:-100%;
+  transition:0.5s;
+}
+/* 전체메뉴를 클릭시 체크박스에 체크 되면서
+.lnb fiedset i.fa-times .lnb 의 위치가 left:0% 만들기 */
+#toggle:checked + header .header_top > .lnb{left:0%;}
+#toggle:checked + header .header_top > fieldset{left:28%;}
+#toggle:checked + header .header_bottom > label.fa-times{left:90%;}
+#toggle:checked + header .header_bottom > .gnb{left:0%;}
+
+/* 메인콘텐츠 서식 */
+main .slide img{
+  height:400px;
+  object-fit:cover; /* 이미지 크기 비율을 높이기준으로 맞춤(가로는 짤림) */
+}
+.free_ex article > h3 + img{
+  max-width:320px;
+  float:none;
+  padding-left:2.1%;
+}
+
+/* 하림펫푸드 사료 무료체험*/
+.free_ex{
+  text-align:center;
+  height:730px;
+}
+.free_ex_right{padding-top:30px;}
+.free_ex_right > h3{
+  padding-top:14px;
+  font-size:2rem;
+}
+.free_ex_right p{
+  padding-bottom:50px;
+  font-size:1.2rem;
+}
+
+/* 하림펫 쇼핑하러가기 */
+.shop{
+  padding:0px 0px 120px 0px;
+  width:100%;
+}
+.shop > h3{font-size:2rem;}
+.p_center{margin-bottom:70px;}
+.shop_slide ul{padding:0px;}
+.swiper-slide > ul > li{
+  text-align:center;
+}
+.shop_slide .swiper-slide img{
+  float:none;
+  width:100%;
+}
+
+/* 상품상세정보 서식 */
+.info{
+  font-size:0.9rem;
+  transform:none;
+}
+.info > h4{font-size:1rem;}
+.info > p{line-height:180%;}
+.info > .price{
+  padding-top:20px;
+  font-size:1rem;
+}
+
+/* 하림펫 스토리 서식 */
+.story{
+  text-align:center;
+  padding-bottom:130px;
+}
+.story article h3{
+  font-size:2rem;
+  padding-bottom:40px;
+}
+.story_left{
+  width:100%;
+  float:none;
+  text-align:center;
+  padding-top:40px;
+}
+.story .s_img{
+  float:none;
+  padding:70px 0px 0px 0px;
+}
+.story .s_img{
+  max-width:320px;
+  padding-left:2.1%;
+}
+.story_left p{
+  font-size:1rem;
+}
+
+/* 인스타그램 갤러리 */
+.instar > h3{
+  font-size:1.8rem;
+}
+.id_name{
+  font-size:1rem;
+}
+.gallery{
+  width:100%;
+  grid-template-columns:repeat(2,auto);
+  grid-template-rows:repeat(3, 200px);
+  box-sizing:border-box;
+}
+
+.gallery li:not([class=m]){
+  display:none;
+}
+
+.instar{
+  background-size:70%;
+}
+.instar h3 >  i.fa-instagram{padding-right:45px;}
+
+
+.pro > ul > li{
+  padding: 0;
+}
+.pro > ul > li img {
+  width:100%;
+}
+.pro > ul > li img:hover{transform:none;}
+
+footer{
+  box-sizing: border-box;
+  width:100%;
+  padding:30px;
+}
+footer >  div{
+  display:flex;
+  justify-content: space-around;
+}
+footer >  div > ul{
+  padding:30px;
+}
+footer > div > ul > li> i.fa-facebook, i.fa-instagram, i.fa-twitter{
+  padding-right:20px;
+  transform: translateX(38px);
+}
+.top{display:none;}
+
+}
